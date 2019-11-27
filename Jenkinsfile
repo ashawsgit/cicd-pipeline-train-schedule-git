@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                sh './gradle build --no-daemon'
+                sh './gradlew build --stacktrace'
                 archiveArtifacts artifacts: 'routes/'
             }
         }
